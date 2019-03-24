@@ -4,6 +4,13 @@ using namespace std;
 #define fileout freopen("a.out", "w", stdout);
 #define ll long long
 #define rep(i , j , n) for(ll i = j ; i <= n ; i++)
+/*
+4                         
+132                       Case #1: 129
+1000                      Case #2: 999
+7                         Case #3: 7
+111111111111111110        Case #4: 99999999999999999
+*/
 
 int digits[20];
 
