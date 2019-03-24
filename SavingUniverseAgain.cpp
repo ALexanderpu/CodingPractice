@@ -19,21 +19,22 @@ ll damage(const string& s){
 void solve(int tc){
     ll d; string p; 
     cin >> d >> p;
-    // check CS at the rightmost end
-    // swapping two adjacent instructions
+    
+    // swapping two adjacent instructions, only way to minimize damage is swap CS,  (SC will increase, SS, CC no change)
+    // check CS at the rightmost end and swap, cnt it!
     int ans = 0;
     while(damage(p) > d){
         bool swapped = false;
         for(int cur = p.size() - 2; cur >= 0; cur--){
             if(p[cur] == 'C'  && p[cur+1] == 'S'){
                 ans++;
-                p[cur] == 'S';
-                p[cur+1] == 'C';
+                p[cur] = 'S';
+                p[cur+1] = 'C';
                 swapped = true;
                 break;
             }
         }
-        if(!swapped) break;
+        if(!swapped) break; // no CS found, cannot swap
     }
     if(damage(p) > d) cout << "Case #" << tc <<": IMPOSSIBLE"<< endl;
     else cout << "Case #" << tc <<": " << ans << endl;
