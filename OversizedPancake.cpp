@@ -8,24 +8,22 @@ using namespace std;
 void solve(tc){
     string s;
     int k;
-		cin >> s >> k;
-		int n = s.length(), ans = 0;
-		for (int i = 0; i + k <= n; i++) { 
+    cin >> s >> k;
+    int n = s.length(), ans = 0;
+    for (int i = 0; i + k <= n; i++) { 
       if (s[i] == '+') continue;
       // flip '-' to '+' for continuous subarray
       for (int j = i; j < i + k; j++)
-        s[j] = (s[j] == '+') ? '-' : '+';
-      ans++;
-		}
-		bool flag = true;
-		for (int i = 0; flag && i < n; i++)
-			 flag = (s[i] == '+');
+         s[j] = (s[j] == '+') ? '-' : '+';
+         ans++;
+    }
+    bool flag = true;
+    for (int i = 0; flag && i < n; i++)
+	flag = (s[i] == '+');
       
-		cout << "Case #" << tc << ": ";
-		if (flag)
-			cout << ans << endl;
-		else
-			cout << "IMPOSSIBLE"<< endl;
+    cout << "Case #" << tc << ": ";
+    if (flag) cout << ans << endl;
+    else cout << "IMPOSSIBLE"<< endl;
 }
 
 int main(){
