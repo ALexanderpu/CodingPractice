@@ -21,3 +21,9 @@ This problem is interactive, which means that the concepts of input and output a
 
 ### Oversize Pancake Flipper
 
+From left to right, when it is '-', flip and count. finally check if it all '+'.
+
+
+### Tiny Number
+
+Find the the last tidy number: 10-based number that the digit in higher position is smaller or equal than lower position: some examples of this are 8, 123, 555, and 224488.  Converting number to array and from the higher to lower position find the first that not meet the condition, minus one and change the rest part after than to be 9.
