@@ -15,3 +15,9 @@ As long as there is an instance of CS in the current program, we always swap the
 ### Go-gopher
 
 This problem is interactive, which means that the concepts of input and output are different than in standard Code Jam problems. (have to flush after print the output: fflush(stdout) in order to get the next input)
+
+
+## Code Jam 2017
+
+### Oversize Pancake Flipper
+
